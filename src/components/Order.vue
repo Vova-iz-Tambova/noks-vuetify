@@ -4,7 +4,18 @@ export default {
     return {
       e1: 1,
       steps: 1,
-      value: 1,
+      res: {
+        fields: ["", ""],
+        order_nesting: [[1]],
+        nesting: [
+          {
+            value: 1,
+            header: "Канал",
+          },
+        ],
+        name: "По каналам",
+        type: 1,
+      },
     };
   },
 
@@ -28,12 +39,7 @@ export default {
 <template>
   <div>
     <v-container style="border: 1px solid #e0e0e0" class="rounded">
-      <v-chip
-        size="x-large"
-        variant="text"
-        color="grey-darken-3"
-        style="font-weight: bold"
-      >
+      <v-chip size="x-large" variant="text" style="font-weight: bold">
         <v-icon
           icon="mdi-file-chart-outline"
           color="blue-lighten-1"
@@ -42,10 +48,10 @@ export default {
         Создание нового отчета
       </v-chip>
 
-      <v-stepper hide-actions v-model="e1" editable bg-color="grey-lighten-2">
+      <v-stepper title="sdsdsd" hide-actions v-model="e1" editable>
         <template v-slot:default="{ prev, next }">
-          <v-stepper-header style="background-color: aqua;">
-            <v-stepper-item bg-color="black" edit-icon title="Шаблон" value="1"></v-stepper-item>
+          <v-stepper-header>
+            <v-stepper-item editIcon title="Шаблон" value="1"></v-stepper-item>
             <v-divider></v-divider>
 
             <v-stepper-item
@@ -70,11 +76,11 @@ export default {
           </v-stepper-header>
 
           <v-stepper-window>
-            <v-stepper-window-item value="1">
+            <v-stepper-window-item value="2">
               <v-card title=" One" flat>...</v-card>
               <v-btn
                 style="border: 1px solid #bdbdbd"
-                class="ma-3 text-none"
+                class="mr-3 text-none"
                 color="blue-lighten-1"
                 variant="outlined"
                 @click="next"
@@ -101,32 +107,8 @@ export default {
               <v-card title=" Four" flat>...</v-card>
             </v-stepper-window-item>
           </v-stepper-window>
-          <v-row>
-            <v-stepper-actions
-              :disabled="disabled"
-              @click:prev="prev"
-              @click:next="next"
-            >
-            </v-stepper-actions>
-            <v-btn>Отмена</v-btn>
-          </v-row>
         </template>
       </v-stepper>
-
-      <v-btn
-        style="border: 1px solid #bdbdbd"
-        class="ma-3 text-none"
-        color="blue-lighten-1"
-        variant="outlined"
-        >Продолжить</v-btn
-      >
-      <v-btn
-        style="border: 1px solid #bdbdbd"
-        class="text-none"
-        color="blue-lighten-1"
-        variant="outlined"
-        >Отменить</v-btn
-      >
     </v-container>
   </div>
 </template>

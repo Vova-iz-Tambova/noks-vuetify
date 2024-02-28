@@ -11,5 +11,6 @@ declare module 'vue' {
     Order: typeof import('./src/components/Order.vue')['default']
     Report: typeof import('./src/components/report.vue')['default']
     Stepper: typeof import('./src/components/Stepper.vue')['default']
+    Table: typeof import('./src/components/Table.vue')['default']
   }
 }
