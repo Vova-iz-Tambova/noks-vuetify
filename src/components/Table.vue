@@ -9,11 +9,11 @@ export default {
 </script>
 
 <template>
-  <v-stepper editable>
+  <v-stepper editable v-slot:default="{ prev, next }">
     <v-stepper-header>
       <template v-for="(item, id) in items" :key="id">
         <v-stepper-item
-          edit-icon
+          edit-icon=""
           :value="id + 1"
           :title="item"
         ></v-stepper-item>
@@ -26,12 +26,16 @@ export default {
         :key="id"
         :value="id + 1"
       >
+      <template>
         <v-card :title="`step ${item}`"></v-card>
+      </template>
       </v-stepper-window-item>
     </v-stepper-window>
     <v-stepper-actions
       next-text="Продолжить"
+      @click:next="next"
       prev-text="Отменить"
+      @click:prev="prev"
     ></v-stepper-actions>
   </v-stepper>
 </template>

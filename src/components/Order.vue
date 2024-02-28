@@ -51,25 +51,29 @@ export default {
       <v-stepper title="sdsdsd" hide-actions v-model="e1" editable>
         <template v-slot:default="{ prev, next }">
           <v-stepper-header>
-            <v-stepper-item editIcon title="Шаблон" value="1"></v-stepper-item>
+            <v-stepper-item
+              edit-icon=""
+              title="Шаблон"
+              value="1"
+            ></v-stepper-item>
             <v-divider></v-divider>
 
             <v-stepper-item
-              edit-icon
+              edit-icon=""
               title="Группировки"
               value="2"
             ></v-stepper-item>
             <v-divider></v-divider>
 
             <v-stepper-item
-              edit-icon
+              edit-icon=""
               title="Показатели"
               value="3"
             ></v-stepper-item>
             <v-divider></v-divider>
 
             <v-stepper-item
-              edit-icon
+              edit-icon=""
               title="Название и доступ"
               value="4"
             ></v-stepper-item>
