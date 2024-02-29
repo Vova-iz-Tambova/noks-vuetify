@@ -1,1 +1,1 @@
-https://noks-vuetify-git-master-vova-iz-tambovas-projects.vercel.app/
+https://noks-vuetify.vercel.app/
