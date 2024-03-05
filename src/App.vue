@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-//
+import Report from '@/entities/report-info/ui/add-report-info.vue'
 </script>
