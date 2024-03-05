@@ -1,5 +1,5 @@
 import { postReport, putReport, Report } from './types';
-import { ApiReport } from '../../api/modules/Report';
+import { ApiReport } from '@/api/modules/Report';
 
 export class ReportModel {
   static async postReport(stat_id: number, data: postReport): Promise<number> {

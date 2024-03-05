@@ -1,4 +1,4 @@
-import { BaseApi } from "../../api 2/modules/BaseApi";
+import { BaseApi } from "./BaseApi";
 import { z } from 'zod';
 import { SReportInfo, REPORT_TYPE } from '../../entities/report-info/scheme';
 import { ReportInfo } from '../../entities/report-info/types';

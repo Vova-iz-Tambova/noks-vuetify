@@ -1,5 +1,5 @@
 import { ReportInfo } from './types';
-import { ApiReportInfo } from '../../api/modules/ReportInfo';
+import { ApiReportInfo } from '@/api/modules/ReportInfo';
 import { REPORT_TYPE } from './scheme';
 
 export class ReportInfoModel {

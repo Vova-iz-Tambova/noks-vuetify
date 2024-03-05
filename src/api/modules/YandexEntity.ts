@@ -1,7 +1,7 @@
-import { BaseApi } from "../../api 2/modules/BaseApi";
+import { BaseApi } from "./BaseApi";
 import { z } from 'zod';
-import { SYandexDirectEntity } from '../../entities/yandex-entity/scheme';
-import { YandexDirectEntity } from '../../entities/yandex-entity/types';
+import { SYandexDirectEntity } from '@/entities/yandex-entity/scheme';
+import { YandexDirectEntity } from '@/entities/yandex-entity/types';
 
 export class ApiYandexEntity extends BaseApi {
   private static instance: ApiYandexEntity;

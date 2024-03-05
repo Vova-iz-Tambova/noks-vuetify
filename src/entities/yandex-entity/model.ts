@@ -1,5 +1,5 @@
 import { YandexDirectEntity } from './types';
-import { ApiYandexEntity } from '../../api/modules/YandexEntity';
+import { ApiYandexEntity } from '@/api/modules/YandexEntity';
 
 export class YandexEntityModel {
   // CAMPAIGN CHANNEL YANDEX DIRECT

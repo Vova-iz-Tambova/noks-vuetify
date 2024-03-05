@@ -1,6 +1,6 @@
-import { BaseApi } from "../../api 2/modules/BaseApi";
+import { BaseApi } from "./BaseApi";
 import { z } from 'zod';
-import { SYandexDirectAuth, SYandexDirectSetting } from '../../entities/yandex-direct/scheme';
+import { SYandexDirectAuth, SYandexDirectSetting } from '@/entities/yandex-direct/scheme';
 import {
   YandexDirectAuth,
   YandexDirectSetting,
@@ -8,16 +8,16 @@ import {
   postYandexDirectIntegration,
   putYandexDirectCompaign,
   postYandexDirectAuth
-} from '../../entities/yandex-direct/types';
+} from '@/entities/yandex-direct/types';
 
 
 export class ApiYandexDirect extends BaseApi {
   private static instance: ApiYandexDirect;
   private _stat_id: number;
-  private _integration_id: number | null;
+  private _integration_id: number | undefined;
   private _localBaseUrl: string;
 
-  private constructor(stat_id, integration_id?, data?) {
+  private constructor(stat_id: number, integration_id?: number | undefined, data?: any) {
     super();
     this._stat_id = stat_id;
     this._integration_id = integration_id;
