@@ -1,25 +1,3 @@
-<script lang="ts">
-export default {
-  data: () => ({
-    items: ["Шаблон", "Группировки", "Показатели", "Название и доступ"],
-    step: 1,
-    dialog: false,
-    response: {
-      fields: ["", ""],
-      order_nesting: [[1]],
-      nesting: [
-        {
-          value: 1,
-          header: "Канал",
-        },
-      ],
-      name: "По каналам",
-      type: 1,
-    },
-  }),
-};
-</script>
-
 <template>
   <div class="d-flex align-center justify-center">
     <v-btn v-if="!dialog" @click="dialog = !dialog">
@@ -106,3 +84,29 @@ export default {
     </v-stepper>
   </v-container>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  data() {
+    const items = ["Шаблон", "Группировки", "Показатели", "Название и доступ"];
+    const step = 1;
+    const dialog = false;
+    const response = {
+      fields: ["", ""],
+      order_nesting: [[1]],
+      nesting: [
+        {
+          value: 1,
+          header: "Канал",
+        },
+      ],
+      name: "По каналам",
+      type: 1,
+    };
+
+    return { items, step, dialog, response };
+  },
+});
+</script>
